@@ -10,18 +10,28 @@ html {
 
 body {
     font-family: "Open Sans";
-    max-width: 1300px;
+    /* max-width: 1300px; */
     margin-left: auto;
     margin-right: auto;
 }
 
+.site-header {
+    background-color: #fff;
+}
+
 .container {
-    max-width: 1180px;
+    max-width: 1300px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 100px;
+    padding-right: 100px;
 
+}
+
+.text {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
 }
 
 .sitenav {
@@ -78,4 +88,24 @@ body {
     line-height: 24px;
     background-color: #00BAFC;
     border-radius: 5px;
+}
+
+.header-promo {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-promo-text-title {
+    width: 470px;
+    font-size: 30px;
+    line-height: 39px;
+    font-weight: 700;
+}
+
+.header-promo-text .text {
+    width: 465px;
+    margin-top: 16px;
+    margin-bottom: 16px;
 }
