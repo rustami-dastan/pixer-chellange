@@ -10,7 +10,6 @@ html {
 
 body {
     font-family: "Open Sans";
-    /* max-width: 1300px; */
     margin-left: auto;
     margin-right: auto;
 }
@@ -77,7 +76,8 @@ body {
     font-weight: 400;
 }
 
-.header-button {
+.main-button {
+    font-weight: 700;
     padding-top: 8px;
     padding-bottom: 8px;
     padding-left: 16px;
@@ -109,3 +109,356 @@ body {
     margin-top: 16px;
     margin-bottom: 16px;
 }
+
+/* START SERVICES SECTION  */
+
+.services {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.info-section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.info-title {
+    font-size: 24px;
+    line-height: 31px;
+    font-weight: 700;
+    text-align: center;
+
+}
+
+.info-section .text {
+    width: 720px;
+    text-align: center;
+}
+
+
+.services-lists {
+    display: grid;
+    grid-template-columns: repeat(6, 130px);
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 48px;
+    grid-column-gap: 73px;
+    padding-top: 8px;
+    grid-template-areas: 
+        "first first second second third third"
+        "fourth fourth fourth fifth fifth fifth";
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.services-lists a {
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-left: 58px;
+    padding-right: 58px;
+    text-decoration: none;
+}
+
+.services-lists a:nth-child(1)::before {
+    width: 203px;
+    height: 130px;
+    content: "";
+    display: block;
+    background-image: url(../images/sercives-list1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.first {
+    grid-area: first;
+}
+
+.second {
+    grid-area: second;
+}
+
+.third {
+    grid-area: third;
+}
+
+.fourth {
+    grid-area: fourth;
+    justify-self: flex-end;
+}
+
+.fifth {
+    grid-area: fifth;
+    justify-self: flex-start;
+}
+
+.services-lists a:nth-child(2)::before {
+    width: 222px;
+    height: 130px;
+    content: "";
+    display: block;
+    background-image: url(../images/sercives-list2.png);
+    background-repeat: no-repeat;
+    grid-area: second;
+    background-size: cover;
+}
+
+.services-lists a:nth-child(3)::before {
+    width: 203px;
+    height: 130px;
+    content: "";
+    display: block;
+    background-image: url(../images/sercives-list3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-area: third;
+}
+
+.services-lists a:nth-child(4)::before {
+    width: 203px;
+    height: 130px;
+    content: "";
+    display: block;
+    background-image: url(../images/sercives-list4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.services-lists a:nth-child(5)::before {
+    width: 203px;
+    height: 130px;
+    content: "";
+    display: block;
+    background-image: url(../images/sercives-list5.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.services-list-title {
+    font-size: 20px;
+    line-height: 26px;
+    color: black;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.services-lists a .text {
+    text-align: center;
+    color: black;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.services-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 56px;
+}
+
+.services-button {
+    margin-left: 16px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #00BAFC;
+}
+
+/* START HOW WE WORK      */
+
+.how-we-work {
+    padding-top: 56px;
+}
+
+.how-we-work-card {
+    display: flex;
+    margin-bottom: 50px;
+    max-width: 870px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.how-we-work-button {
+    width: 168px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 56px;
+}
+
+
+/* START ORDER FORM  */
+
+.order-form {
+    max-width: 1360px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #00bafc;
+    padding-bottom: 64px;
+    padding-top: 56px;
+}
+
+.order-form .info-section {
+    color: white;
+}
+
+.order-form-form {
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-top: 24px;
+    color: black;
+    
+}
+
+.order-form-form .main-button {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 16px;
+}
+
+.order-form-form input {
+    margin-bottom: 16px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 16px;
+    border-radius: 5px;
+    border:none;
+    background-color: #F3F3F3;
+}
+
+.order-form-form input [placeholder] {
+    color:black;
+}
+
+.order-form-form select {
+    width: 330px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 16px;
+    border-radius: 5px;
+    background-color: #F3F3F3;
+    border: none;
+}
+
+
+/* START FOOTER  */
+
+.site-footer {
+    max-width: 1360px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #191919;
+    margin-top: 0;
+    display: flex;
+    color: white;
+    padding-top: 56px;
+    padding-bottom: 56px;
+}
+
+.site-footer .container {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.footer-about {
+    width: 320px;
+    margin-right: 100px;
+}
+
+
+.footer h2 {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 700;
+}
+
+.footer-about-text {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.footer-menus {
+    margin-right: 87px;
+
+}
+
+
+.footer-menus-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-item {
+    margin-bottom: 8px;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.footer-socials-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-socials-list li {
+    display: flex;
+}
+
+.footer-socials-list li a {
+    margin-left: 8px;
+}
+
+.footer-socials-list li:nth-child(2)::before {
+    display: block;
+    content: "";
+    width: 21.31px;
+    height: 23.11px;
+    background-image: url(../images/facebook-icon.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.footer-socials-list li:nth-child(1)::before {
+    display: block;
+    content: "";
+    width: 22px;
+    height: 24px;
+    background-image: url(../images/telegram-icon.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.footer-socials-list li:nth-child(3)::before {
+    display: block;
+    content: "";
+    width: 24px;
+    height: 24px;
+    background-image: url(../images/instagram-icon.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
