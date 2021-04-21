@@ -1,9 +1,16 @@
+:root {
+    /* Colors */
+    --text-color: #191919;
+    --accent-color: #00bafc;
+    /* Font related */
+    --font-family: "Open Sans", "Arial", sans-serif;
+}
+
 html {
     box-sizing: border-box;
 }
 
-*.
-*::before,
+*. *::before,
 *::after {
     box-sizing: inherit;
 }
@@ -24,7 +31,6 @@ body {
     margin-right: auto;
     padding-left: 100px;
     padding-right: 100px;
-
 }
 
 .text {
@@ -34,46 +40,110 @@ body {
 }
 
 .sitenav {
-    padding-top: 8px;
-    padding-bottom: 8px;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-.sitenav .container{
+.sitenav .container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
-.sitenav-container {
-    display: flex;
-    align-items: center;
-    justify-content: start;
+.site-logo {
+    margin-right: auto;
 }
 
 .site-logo img {
     display: block;
-} 
+}
 
 .sitenav-list {
     display: flex;
-}
-
-.sitenav-item {
-    margin-right: 32px;
     list-style: none;
 }
 
-.sitenav-list li:last-child {
-    margin-right: 24px;
+.sitenav-item {
+    position: relative;
+    z-index: 1;
 }
 
 .sitenav-link {
+    padding: 16px;
     text-decoration: none;
-    color: black;
+    color: var(--text-color);
+    transition: 0.3s ease;
     font-size: 15px;
     line-height: 24px;
     font-weight: 400;
+}
+
+.sitenav-link:hover {
+    box-shadow: inset 0 -3px 0 0 var(--text-color);
+}
+
+.sitenav-link:active {
+    color: #fff;
+    background-color: var(--text-color);
+    opacity: 0.7;
+}
+
+.button {
+    padding: 8px 16px;
+    text-decoration: none;
+    background-color: var(--accent-color);
+    color: #fff;
+    border-radius: 5px;
+    border: 3px solid transparent;
+    margin-left: 24px;
+}
+
+.button:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+    background: none;
+}
+
+.button:active {
+    background: var(--accent-color);
+    color: #fff;
+    opacity: 0.6;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    z-index: 5;
+    left: 50%;
+    top: 160%;
+    transform: translateX(-50%);
+    padding-left: 0;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin: 0;
+    border-radius: 5px;
+    list-style: none;
+    background-color: #fff;
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.1);
+}
+
+.sitenav-item:hover .dropdown {
+    display: block;
+}
+
+.dropdown a {
+    display: block;
+    padding: 8px 16px;
+    color: var(--text-color);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.dropdown a:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+.dropdown a:active {
+    opacity: 0.6;
 }
 
 .main-button {
@@ -88,6 +158,14 @@ body {
     line-height: 24px;
     background-color: #00BAFC;
     border-radius: 5px;
+}
+
+.main-button:hover {
+    opacity: 0.8;
+}
+
+.main-button:active {
+    opacity: 0.6;
 }
 
 .header-promo {
@@ -110,6 +188,7 @@ body {
     margin-bottom: 16px;
 }
 
+
 /* START SERVICES SECTION  */
 
 .services {
@@ -128,14 +207,12 @@ body {
     line-height: 31px;
     font-weight: 700;
     text-align: center;
-
 }
 
 .info-section .text {
     width: 720px;
     text-align: center;
 }
-
 
 .services-lists {
     display: grid;
@@ -144,9 +221,7 @@ body {
     grid-row-gap: 48px;
     grid-column-gap: 73px;
     padding-top: 8px;
-    grid-template-areas: 
-        "first first second second third third"
-        "fourth fourth fourth fifth fifth fifth";
+    grid-template-areas: "first first second second third third" "fourth fourth fourth fifth fifth fifth";
     margin-left: auto;
     margin-right: auto;
 }
@@ -161,6 +236,14 @@ body {
     text-decoration: none;
 }
 
+.services-lists a:hover {
+    box-shadow: 0px 12px 21px rgba(0, 0, 0, 0.1);
+}
+
+.services-lists a:active {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
 .services-lists a:nth-child(1)::before {
     width: 203px;
     height: 130px;
@@ -169,7 +252,6 @@ body {
     background-image: url(../images/sercives-list1.png);
     background-repeat: no-repeat;
     background-size: cover;
-    
 }
 
 .first {
@@ -269,6 +351,7 @@ body {
     color: #00BAFC;
 }
 
+
 /* START HOW WE WORK      */
 
 .how-we-work {
@@ -319,7 +402,6 @@ body {
     border-radius: 5px;
     margin-top: 24px;
     color: black;
-    
 }
 
 .order-form-form .main-button {
@@ -335,12 +417,12 @@ body {
     margin-right: auto;
     padding: 16px;
     border-radius: 5px;
-    border:none;
+    border: none;
     background-color: #F3F3F3;
 }
 
 .order-form-form input [placeholder] {
-    color:black;
+    color: black;
 }
 
 .order-form-form select {
@@ -381,7 +463,6 @@ body {
     margin-right: 100px;
 }
 
-
 .footer h2 {
     font-size: 20px;
     line-height: 26px;
@@ -396,9 +477,7 @@ body {
 
 .footer-menus {
     margin-right: 87px;
-
 }
-
 
 .footer-menus-list {
     list-style: none;
@@ -418,6 +497,14 @@ body {
     font-weight: 400;
 }
 
+.footer-link:hover {
+    color: #00BAFC;
+}
+
+.footer-link:active {
+    opacity: 0.6;
+}
+
 .footer-socials-list {
     list-style: none;
     margin: 0;
@@ -430,6 +517,14 @@ body {
 
 .footer-socials-list li a {
     margin-left: 8px;
+}
+
+.footer-socials-list li a:hover {
+    color: #00BAFC;
+}
+
+.footer-socials-list li a:active {
+    opacity: 0.6;
 }
 
 .footer-socials-list li:nth-child(2)::before {
@@ -461,4 +556,3 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
-
